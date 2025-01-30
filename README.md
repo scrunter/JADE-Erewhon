@@ -2,7 +2,7 @@
 This repository contains **Erewhon**, the example JADE schema. Erewhon is a fictional E-commerce platform where agents sell high-end items and clients can bid on or purchase them.
 
 ## Documentation
-Documentation for the Erewhon system can be found at: [https://secure.jadeworld.com/JADETech/JADE2022/WhitePapers/WP_Erewhon.pdf](https://secure.jadeworld.com/developer-centre/Jade2022/Erewhon/Erewhon.pdf)
+Documentation for the Erewhon system can be found at: https://secure.jadeworld.com/developer-centre/Jade2022/Erewhon/Erewhon.pdf
 
 ## Getting Started
 These instructions get a copy of the Erewhon system up and running on your local machine.
@@ -11,12 +11,12 @@ These instructions get a copy of the Erewhon system up and running on your local
 
 Before you can load the schemas, you need JADE 2022 installed. 
 
-1. Grab a FREE Developer's license at [https://www.jadeworld.com/jade-platform/developer-centre/pricing-licensing/free-development-license ](https://www.jadeplatform.com/developer-centre/licensing/free-development-licence)
-2. Download the JADE 2022 release at https://www.jadeworld.com/developer-center/download-jade 
+1. Grab a FREE Developer's license at https://www.jadeplatform.com/developer-centre/licensing/free-development-licence
+2. Download the JADE 2022 release at https://www.jadeplatform.com/developer-centre/downloads
 3. Open the installer and follow the instructions in the install wizard.
 4. JADE is now installed, and a shortcut has been placed in your Start menu. You're good to go!
 
-> For details about installing JADE, see https://secure.jadeworld.com/JADETech/JADE2022/Docs/InstallConfig.pdf
+> For details about installing JADE, see https://secure.jadeworld.com/developer-centre/JADE2022/Docs/InstallConfig.pdf
 
 ### Loading the Schemas using JADE Git Integration
 
