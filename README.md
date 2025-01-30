@@ -61,7 +61,7 @@ Before you can load the schemas, you need JADE 2022 installed.
 > The schemas contained in this repository are for demonstration purposes, and as such, are not open to pull requests. However, you are welcome to create a fork and make changes to your own copy, subject to our license ([LICENSE.txt](LICENSE.txt)).
 
 **Q.** What can I do with this Erewhon system?
-> Using the Administration application, you can take the role of a sales agent and post items for your (fictional) clients to buy. Using the **ErewhonShop** application, you can take the role of a client and bid for or buy (fictional) items. For more details, see the <a href="[https://secure.jadeworld.com/developer-centre/Jade2022/Erewhon/Erewhon.pdf]">*Erewhon Demonstration System Reference*</a>.
+> Using the Administration application, you can take the role of a sales agent and post items for your (fictional) clients to buy. Using the **ErewhonShop** application, you can take the role of a client and bid for or buy (fictional) items. For more details, see https://secure.jadeworld.com/developer-centre/Jade2022/Erewhon/Erewhon.pdf.
 
 ## License
 
