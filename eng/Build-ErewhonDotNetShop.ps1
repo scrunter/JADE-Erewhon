@@ -75,6 +75,20 @@ if (-not ($files.path -contains 'ShopUI.exe') -or -not ($files.path -contains 'S
     -not ($files.path -contains 'ErewhonExposures.dll')) {
     throw 'The expected .NET Shop outputs were not produced.'
 }
+$joobAssemblies = @($profile.build.joobAssemblies)
+if ($joobAssemblies.Count -ne 6) { throw 'The reviewed JADE .NET runtime inventory changed.' }
+foreach ($assembly in $joobAssemblies) {
+    if ($assembly.path -cnotmatch '^JadeSoftware\.[A-Za-z.]+\.dll$' -or
+        $assembly.sha256 -cnotmatch '^[a-f0-9]{64}$' -or $assembly.bytes -lt 1) {
+        throw 'Invalid JADE .NET runtime lock member.'
+    }
+    $published = Join-Path $output $assembly.path
+    if (-not (Test-Path -LiteralPath $published -PathType Leaf) -or
+        (Get-Item -LiteralPath $published).Length -ne $assembly.bytes -or
+        (Get-FileHash -LiteralPath $published -Algorithm SHA256).Hash -ine $assembly.sha256) {
+        throw ('The published JADE .NET runtime does not match JADE 25.0.02.011: ' + $assembly.path)
+    }
+}
 
 $manifest = [ordered]@{
     schemaVersion = '1.0'
@@ -88,6 +102,7 @@ $manifest = [ordered]@{
     selfContained = $false
     joobPackage = $profile.build.joobPackage
     joobVersion = $profile.build.joobVersion
+    joobAssemblies = $joobAssemblies
     sourceProfileSha256 = (Get-FileHash -LiteralPath $profilePath -Algorithm SHA256).Hash.ToLowerInvariant()
     files = $files
 }

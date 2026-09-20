@@ -23,6 +23,38 @@
     "targetFramework": "net8.0-windows",
     "runtimeIdentifier": "win-x64",
     "joobPackage": "JadeSoftware.Joob-Ansi",
-    "joobVersion": "25.0.2.3"
+    "joobVersion": "25.0.2.3",
+    "joobAssemblies": [
+      {
+        "path": "JadeSoftware.Jade.DotNetInterop.dll",
+        "bytes": 25440,
+        "sha256": "3fa43318bc99f0193d4901741406c18e040a3fc97c0f8d214571f64931b3bce6"
+      },
+      {
+        "path": "JadeSoftware.Joob.Common.dll",
+        "bytes": 803168,
+        "sha256": "ef8b0035b5f1cbed45b6456de8d9869cca37e7acf4b70cb4345bf24b40a98972"
+      },
+      {
+        "path": "JadeSoftware.Joob.dll",
+        "bytes": 333152,
+        "sha256": "b0d73b4e4601a2732f91f48999dd3f6e319c44f1c03703a8060e3ae3a5e8d38b"
+      },
+      {
+        "path": "JadeSoftware.Joob.Internals.dll",
+        "bytes": 185184,
+        "sha256": "e29e07fa06bf23f4f29aae0fbad474b20109070b2dfef3cd47efa343009f82dd"
+      },
+      {
+        "path": "JadeSoftware.Joob.Interop.dll",
+        "bytes": 105312,
+        "sha256": "ff5874401c76ab163212e8acef4fd5989ff56a0963f02eea018053490ac285e5"
+      },
+      {
+        "path": "JadeSoftware.Joob.Management.dll",
+        "bytes": 186208,
+        "sha256": "63eca6533291362980c11b0afd22efc916e1c267249b99f4284f653215f3d184"
+      }
+    ]
   }
 }

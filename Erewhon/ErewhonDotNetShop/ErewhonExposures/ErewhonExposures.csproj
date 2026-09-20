@@ -6,6 +6,8 @@
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ActualTargetFramework Condition="'$(TargetFramework)' == 'net8.0'">net8.0</ActualTargetFramework>
+    <ActualTargetFramework Condition="'$(TargetFramework)' == 'net48'">net48</ActualTargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="JadeSoftware.Joob-Ansi" Version="25.0.2.3" />
