@@ -1,0 +1,43 @@
+name: erewhon-ci-$(Date:yyyyMMdd)-$(Rev:r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+
+pr:
+  autoCancel: true
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- checkout: self
+  clean: true
+  fetchDepth: 0
+
+- task: UseDotNet@2
+  displayName: Use .NET 8 SDK
+  inputs:
+    packageType: sdk
+    version: 8.0.x
+
+- task: PowerShell@2
+  displayName: Build locked x64 .NET Shop
+  inputs:
+    pwsh: true
+    targetType: filePath
+    filePath: eng/Build-ErewhonDotNetShop.ps1
+    arguments: >-
+      -OutputDirectory "$(Build.ArtifactStagingDirectory)/erewhon-dotnet-shop"
+      -LockedRestore
+
+- task: PublishPipelineArtifact@1
+  displayName: Publish .NET Shop and hash manifest
+  inputs:
+    targetPath: $(Build.ArtifactStagingDirectory)/erewhon-dotnet-shop
+    artifactName: erewhon-dotnet-shop

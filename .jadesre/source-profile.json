@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "profileId": "lab-erewhon",
+  "repository": "https://github.com/scrunter/JADE-Erewhon",
+  "upstreamRepository": "https://github.com/jadesoftwarenz/JADE-Erewhon",
+  "nativeRoot": "Erewhon",
+  "dotNetShopRoot": "Erewhon/ErewhonDotNetShop",
+  "sourceExtensions": [
+    ".scm",
+    ".ddx",
+    ".ddxx",
+    ".cs",
+    ".xaml",
+    ".csproj",
+    ".sln",
+    ".config"
+  ],
+  "build": {
+    "solution": "Erewhon/ErewhonDotNetShop/ErewhonDotNetApp.sln",
+    "entryProject": "Erewhon/ErewhonDotNetShop/ShopUI/ShopUI.csproj",
+    "configuration": "Release",
+    "platform": "x64",
+    "targetFramework": "net8.0-windows",
+    "runtimeIdentifier": "win-x64",
+    "joobPackage": "JadeSoftware.Joob-Ansi",
+    "joobVersion": "25.0.2.3"
+  }
+}

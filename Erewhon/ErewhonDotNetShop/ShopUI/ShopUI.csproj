@@ -2,9 +2,11 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,15 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="JadeSoftware.Jade.DotNetInterop">
-      <HintPath>c:\jade\bin\JadeSoftware.Jade.DotNetInterop.dll</HintPath>
-    </Reference>
-    <Reference Include="JadeSoftware.Joob">
-      <HintPath>c:\jade\bin\JadeSoftware.Joob.dll</HintPath>
-    </Reference>
-    <Reference Include="JadeSoftware.Joob.Common">
-      <HintPath>c:\jade\bin\JadeSoftware.Joob.Common.dll</HintPath>
-    </Reference>
+    <PackageReference Include="JadeSoftware.Joob-Ansi" Version="25.0.2.3" />
   </ItemGroup>
 
   <ItemGroup>
