@@ -1,4 +1,11 @@
 # JADE Erewhon Example Schemas
+
+This fork is the controlled Erewhon application source for the JadeSRE lab. The
+native schemas and the .NET Shop remain derived from the upstream JADE sample;
+JadeSRE-specific build metadata is in `.jadesre/source-profile.json`, and CI is
+owned by Azure DevOps through `pipelines/erewhon-ci.yml`. A deployment must use
+an immutable commit and retained artifact hashes, never the mutable `main`
+branch as its release identity.
 This repository contains **Erewhon**, the example JADE schema. Erewhon is a fictional E-commerce platform where agents sell high-end items and clients can bid on or purchase them.
 
 ## Documentation
